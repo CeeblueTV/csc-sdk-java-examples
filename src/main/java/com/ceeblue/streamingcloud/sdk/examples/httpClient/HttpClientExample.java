@@ -1,8 +1,8 @@
 package com.ceeblue.streamingcloud.sdk.examples.httpClient;
 
 import com.ceeblue.streamingcloud.sdk.http.HttpClient;
-import com.ceeblue.streamingcloud.sdk.http.template.HttpRestTemplate;
-import com.ceeblue.streamingcloud.sdk.http.template.utils.RestTemplateResponseErrorHandler;
+import com.ceeblue.streamingcloud.sdk.http.clients.HttpRestTemplate;
+import com.ceeblue.streamingcloud.sdk.http.clients.RestTemplateResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 public class HttpClientExample {
