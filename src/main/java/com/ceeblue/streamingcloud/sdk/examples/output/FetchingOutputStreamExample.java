@@ -8,7 +8,7 @@ import java.util.List;
 
 public class FetchingOutputStreamExample {
     public static void main(String[] args) {
-        String streamId = "Place your streamId here";
+        String streamId = "Place your input streamId here";
 
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 
