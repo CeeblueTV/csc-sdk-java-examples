@@ -5,6 +5,7 @@ import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
 import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3Compatible;
 
 public class StorageCreationExample {
+
     public static void main(String[] args) {
         AmazonS3Compatible storage = new AmazonS3Compatible("Storage name", "AK...............PU", "GW.............................f+", "test-recordings", "google..com");
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
@@ -14,4 +15,5 @@ public class StorageCreationExample {
 
         System.out.println(createdStorage);
     }
+
 }
