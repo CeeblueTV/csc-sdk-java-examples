@@ -5,7 +5,7 @@ import com.ceeblue.streamingcloud.sdk.streams.output.OutputStreamClient;
 
 public class DeletingOutputStreamExample {
     public static void main(String[] args) {
-        String streamId = "Place your streamId here";
+        String streamId = "Place your output streamId here";
 
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 
@@ -15,7 +15,7 @@ public class DeletingOutputStreamExample {
 
 class DeletingOutputSessionExample {
     public static void main(String[] args) {
-        String streamId = "Place your streamId here";
+        String streamId = "Place your input streamId here";
 
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 

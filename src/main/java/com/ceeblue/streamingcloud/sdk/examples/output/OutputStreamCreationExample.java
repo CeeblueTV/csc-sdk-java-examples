@@ -1,7 +1,7 @@
 package com.ceeblue.streamingcloud.sdk.examples.output;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
-import com.ceeblue.streamingcloud.sdk.streams.input.models.InputFormat;
+import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
 import com.ceeblue.streamingcloud.sdk.streams.output.OutputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.output.models.output.CreatedOutput;
 import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;

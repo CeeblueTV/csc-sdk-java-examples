@@ -11,7 +11,7 @@ public class InputStreamUpdatingExample {
         InputStreamClient inputStreamClient = ApiClientsCreationExamples.getInputStreamClient();
         String streamId = "Place your streamId here";
 
-        CreatedInput createdInput = inputStreamClient.updateInput(streamId, Access.Private, null);
+        CreatedInput createdInput = inputStreamClient.updateInput(streamId, Access.Private, "token");
 
         System.out.println(createdInput);
     }

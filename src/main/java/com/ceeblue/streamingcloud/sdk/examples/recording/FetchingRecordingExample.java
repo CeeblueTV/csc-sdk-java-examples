@@ -30,7 +30,7 @@ class FetchAllRecordingsExample {
 class FetchAllRecordingsByStream {
     public static void main(String[] args) {
         RecordingClient recordingClient = ApiClientsCreationExamples.getRecordingClient();
-        String streamId = "Place your streamId here";
+        String streamId = "Place your input streamId here";
 
         List<CreatedRecording> allRecordings = recordingClient.getRecordingByStreamId(streamId);
 

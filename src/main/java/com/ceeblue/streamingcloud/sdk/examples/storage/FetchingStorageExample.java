@@ -17,13 +17,15 @@ public class FetchingStorageExample {
 
         System.out.println(storage);
     }
+
 }
 
 class fetchingAllStorages {
+
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
-        List<AmazonS3> storages = storageClient.getStorages();
+        List <AmazonS3> storages = storageClient.getStorages();
 
         System.out.println(storages);
     }

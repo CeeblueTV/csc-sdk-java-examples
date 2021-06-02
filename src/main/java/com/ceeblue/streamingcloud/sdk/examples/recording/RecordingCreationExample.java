@@ -6,7 +6,7 @@ import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClient;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.Capture;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.FileFormat;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.Recording;
-import com.ceeblue.streamingcloud.sdk.streams.recording.models.Source;
+import com.ceeblue.streamingcloud.sdk.streams.models.Source;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.created.CreatedRecording;
 import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
 import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3;
@@ -22,7 +22,7 @@ public class RecordingCreationExample {
 
         RecordingClient recordingClient = ApiClientsCreationExamples.getRecordingClient();
 
-        String streamId = "Place your streamId here";
+        String streamId = "Place your input streamId here";
 
         CreatedRecording createdRecording = recordingClient.createRecording(
                 new Recording(streamId, "recordingTest", FileFormat.MKV,

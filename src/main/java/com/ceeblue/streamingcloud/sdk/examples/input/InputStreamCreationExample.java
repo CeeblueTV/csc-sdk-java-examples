@@ -3,7 +3,7 @@ package com.ceeblue.streamingcloud.sdk.examples.input;
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.input.StreamBuilder;
-import com.ceeblue.streamingcloud.sdk.streams.input.models.InputFormat;
+import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.OutputSettings;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.SpeedPreset;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.encoder.EncoderSettings;
