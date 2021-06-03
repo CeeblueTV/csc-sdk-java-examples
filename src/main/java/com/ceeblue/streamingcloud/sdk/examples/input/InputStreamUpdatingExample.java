@@ -4,7 +4,7 @@ import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExam
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.Access;
-import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.CreatedInput;
+import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.InputEndpoint;
 
 public class InputStreamUpdatingExample {
 
@@ -13,9 +13,9 @@ public class InputStreamUpdatingExample {
         String streamId = "Place your streamId here";
 
         try {
-            CreatedInput createdInput = inputStreamClient.updateInput(streamId, Access.Private, "token");
+            InputEndpoint inputEndpoint = inputStreamClient.updateInput(streamId, Access.Private, "token");
 
-            System.out.println(createdInput);
+            System.out.println(inputEndpoint);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }

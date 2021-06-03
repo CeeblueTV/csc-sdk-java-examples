@@ -2,10 +2,7 @@ package com.ceeblue.streamingcloud.sdk.examples.snapshot;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
-import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
 import com.ceeblue.streamingcloud.sdk.streams.models.Source;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.CreatedOutput;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
 import com.ceeblue.streamingcloud.sdk.streams.snapshot.SnapshotClient;
 
 public class DeleteSnapshotExample {

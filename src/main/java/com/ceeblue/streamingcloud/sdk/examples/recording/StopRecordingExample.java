@@ -2,9 +2,6 @@ package com.ceeblue.streamingcloud.sdk.examples.recording;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
-import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.CreatedOutput;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
 import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClient;
 
 public class StopRecordingExample {

@@ -2,11 +2,8 @@ package com.ceeblue.streamingcloud.sdk.examples.recording;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
-import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.CreatedOutput;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
 import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClient;
-import com.ceeblue.streamingcloud.sdk.streams.recording.models.created.CreatedRecording;
+import com.ceeblue.streamingcloud.sdk.streams.recording.models.created.RecordingModel;
 
 import java.util.List;
 
@@ -16,7 +13,7 @@ public class FetchingRecordingExample {
         RecordingClient recordingClient = ApiClientsCreationExamples.getRecordingClient();
         String recordingId = "Place your recording id here";
 
-        CreatedRecording recording = recordingClient.getRecording(recordingId);
+        RecordingModel recording = recordingClient.getRecording(recordingId);
 
         System.out.println(recording);
     }
@@ -29,7 +26,7 @@ class FetchAllRecordingsExample {
         RecordingClient recordingClient = ApiClientsCreationExamples.getRecordingClient();
 
         try {
-            List <CreatedRecording> allRecordings = recordingClient.getRecordings();
+            List <RecordingModel> allRecordings = recordingClient.getRecordings();
 
             System.out.println(allRecordings);
         } catch (ClientException exception) {
@@ -46,7 +43,7 @@ class FetchAllRecordingsByStream {
         String streamId = "Place your input streamId here";
 
         try {
-            List <CreatedRecording> allRecordings = recordingClient.getRecordingByStreamId(streamId);
+            List <RecordingModel> allRecordings = recordingClient.getRecordingByStreamId(streamId);
 
             System.out.println(allRecordings);
         } catch (ClientException exception) {

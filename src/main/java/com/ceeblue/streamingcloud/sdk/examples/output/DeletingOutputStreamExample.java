@@ -2,8 +2,6 @@ package com.ceeblue.streamingcloud.sdk.examples.output;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
-import com.ceeblue.streamingcloud.sdk.streams.input.models.Access;
-import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.CreatedInput;
 import com.ceeblue.streamingcloud.sdk.streams.output.OutputStreamClient;
 
 public class DeletingOutputStreamExample {
