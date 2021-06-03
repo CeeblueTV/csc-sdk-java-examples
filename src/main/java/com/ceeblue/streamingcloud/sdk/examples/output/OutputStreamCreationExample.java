@@ -1,10 +1,13 @@
 package com.ceeblue.streamingcloud.sdk.examples.output;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
 import com.ceeblue.streamingcloud.sdk.streams.output.OutputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.output.models.output.CreatedOutput;
 import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
+
+import java.util.List;
 
 public class OutputStreamCreationExample {
 
@@ -13,8 +16,13 @@ public class OutputStreamCreationExample {
 
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 
-        CreatedOutput createdOutput = outputStreamClient.createOutput(new Output(streamId, InputFormat.RTMP));
+        try {
+            CreatedOutput createdOutput = outputStreamClient.createOutput(new Output(streamId, InputFormat.RTMP));
 
-        System.out.println(createdOutput);
+            System.out.println(createdOutput);
+        } catch (ClientException exception) {
+            System.out.println("Something went wrong: " + exception);
+        }
     }
+
 }

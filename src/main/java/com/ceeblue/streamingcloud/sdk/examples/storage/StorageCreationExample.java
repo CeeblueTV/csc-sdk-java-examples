@@ -1,6 +1,7 @@
 package com.ceeblue.streamingcloud.sdk.examples.storage;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
 import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3Compatible;
 
@@ -11,9 +12,13 @@ public class StorageCreationExample {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
 
-        AmazonS3Compatible createdStorage = (AmazonS3Compatible) storageClient.createStorage(storage);
+        try {
+            AmazonS3Compatible createdStorage = (AmazonS3Compatible) storageClient.createStorage(storage);
 
-        System.out.println(createdStorage);
+            System.out.println(createdStorage);
+        } catch (ClientException exception) {
+            System.out.println("Something went wrong: " + exception);
+        }
     }
 
 }

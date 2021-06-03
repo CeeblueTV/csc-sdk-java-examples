@@ -1,6 +1,7 @@
 package com.ceeblue.streamingcloud.sdk.examples.input;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.OutputSettings;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.CreatedInput;
@@ -22,9 +23,14 @@ public class InputStreamCreationExample {
                                 .addTrack(Opus_48kHz_2Ch_120Kbps())
                 );
 
-        CreatedInput createdInput = inputStreamClient.createInput(input);
+        try {
+            CreatedInput createdInput = inputStreamClient.createInput(input);
 
-        System.out.println(createdInput);
+            System.out.println(createdInput);
+        } catch (ClientException exception) {
+            System.out.println("Something went wrong: " + exception);
+        }
+
     }
 
 }

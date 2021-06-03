@@ -1,6 +1,10 @@
 package com.ceeblue.streamingcloud.sdk.examples.recording;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
+import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
+import com.ceeblue.streamingcloud.sdk.streams.output.models.output.CreatedOutput;
+import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
 import com.ceeblue.streamingcloud.sdk.streams.push.models.TrackSelector;
 import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClient;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.Capture;
@@ -14,6 +18,7 @@ import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3;
 import static com.ceeblue.streamingcloud.sdk.streams.input.models.tracks.TrackType.Video;
 
 public class RecordingCreationExample {
+
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
@@ -24,12 +29,17 @@ public class RecordingCreationExample {
 
         String streamId = "Place your input streamId here";
 
-        CreatedRecording createdRecording = recordingClient.createRecording(
-                new Recording(streamId, "recordingTest", FileFormat.MKV,
-                        new Capture().setSource(Source.Incoming).setTrackSelector(new TrackSelector(Video)), storage.getName()
-                )
+        Recording recordingTest = new Recording(streamId, "recordingTest", FileFormat.MKV,
+                new Capture().setSource(Source.Incoming).setTrackSelector(new TrackSelector(Video)), storage.getName()
         );
 
-        System.out.println(createdRecording);
+        try {
+            CreatedRecording createdRecording = recordingClient.createRecording(recordingTest);
+
+            System.out.println(createdRecording);
+        } catch (ClientException exception) {
+            System.out.println("Something went wrong: " + exception);
+        }
     }
+
 }

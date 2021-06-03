@@ -1,6 +1,7 @@
 package com.ceeblue.streamingcloud.sdk.examples.storage;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
 import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3Compatible;
 
@@ -12,9 +13,13 @@ public class UpdatingStorageExample {
         //Existed stream from cloud
         AmazonS3Compatible storage = new AmazonS3Compatible("Your storage id", "AK...............PU", "GW.............................f+", "test-recordings", "Some endpoint");
 
-        AmazonS3Compatible updatedStorage = (AmazonS3Compatible) storageClient.updateStorage(storage);
+        try {
+            AmazonS3Compatible updatedStorage = (AmazonS3Compatible) storageClient.updateStorage(storage);
 
-        System.out.println(updatedStorage);
+            System.out.println(updatedStorage);
+        } catch (ClientException exception) {
+            System.out.println("Something went wrong: " + exception);
+        }
     }
 
 }
