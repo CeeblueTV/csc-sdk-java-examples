@@ -14,7 +14,6 @@ public class FetchingStorageExample {
 
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
-
         try {
             AmazonS3 storage = storageClient.getStorage(storageId);
 
@@ -23,22 +22,19 @@ public class FetchingStorageExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
 
-class fetchingAllStorages {
+class ListStoragesExample {
 
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
-
         try {
             List <AmazonS3> storages = storageClient.getStorages();
 
-            System.out.println(storages);
+            storages.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

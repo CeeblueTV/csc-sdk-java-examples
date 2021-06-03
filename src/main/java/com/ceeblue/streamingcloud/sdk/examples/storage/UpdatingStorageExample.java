@@ -10,7 +10,7 @@ public class UpdatingStorageExample {
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
-        //Existed stream from cloud
+        // Existed storage from cloud
         AmazonS3Compatible storage = new AmazonS3Compatible("Your storage id", "AK...............PU", "GW.............................f+", "test-recordings", "Some endpoint");
 
         try {
@@ -21,5 +21,4 @@ public class UpdatingStorageExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

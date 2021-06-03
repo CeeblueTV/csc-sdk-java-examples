@@ -9,14 +9,12 @@ public class DeletingStorageExample {
     public static void main(String[] args) {
         String storageId = "place your storage id here";
 
+        StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
         try {
-            StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
-
             storageClient.deleteStorage(storageId);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
