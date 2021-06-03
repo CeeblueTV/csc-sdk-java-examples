@@ -10,7 +10,7 @@ import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
 public class OutputStreamCreationExample {
 
     public static void main(String[] args) {
-        String streamId = "abfa40ec-5b8d-45af-92e6-fee5659db346";
+        String streamId = "Place your input stream id here";
 
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 

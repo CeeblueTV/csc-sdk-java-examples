@@ -14,7 +14,6 @@ public class FetchingSnapshotSettingsExample {
         String streamId = "Place your input streamId here";
 
         try {
-
             Snapshot snapshot = snapshotClient.getSnapshotSettings(streamId, Source.Incoming);
 
             System.out.println(snapshot);
