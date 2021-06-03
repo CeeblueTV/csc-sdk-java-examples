@@ -4,19 +4,17 @@ import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExam
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 
-public class InputStreamDeletingExamole {
+public class InputStreamDeletingExample {
 
     public static void main(String[] args) {
         String streamId = "Place your input id here";
 
         InputStreamClient inputStreamClient = ApiClientsCreationExamples.getInputStreamClient();
-        
+
         try {
             inputStreamClient.deleteInput(streamId);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
-
     }
-
 }

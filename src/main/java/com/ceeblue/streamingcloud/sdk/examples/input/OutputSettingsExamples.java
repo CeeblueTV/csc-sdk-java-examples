@@ -13,15 +13,12 @@ public class OutputSettingsExamples {
 
         try {
             OutputSettings output = inputStreamClient.getOutputSettings(streamId);
+            System.out.println("Current output settings: " + output);
 
-            System.out.println(output);
-
-            OutputSettings updatedOutput = inputStreamClient.updateOutputSettings(streamId, output.setPassthrough(false));
-
-            System.out.println(updatedOutput);
+            OutputSettings updatedOutput = inputStreamClient.updateOutputSettings(streamId, output.setPassthrough(true));
+            System.out.println("Updated output settings: " + updatedOutput);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
