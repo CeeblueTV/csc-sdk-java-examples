@@ -5,7 +5,7 @@ import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.OutputSettings;
 
-public class OutputSettingsExamples {
+public class OutputSettingsExample {
 
     public static void main(String[] args) {
         String streamId = "Place your streamId here";
