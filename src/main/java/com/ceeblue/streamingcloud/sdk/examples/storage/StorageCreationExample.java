@@ -17,7 +17,7 @@ public class StorageCreationExample {
 
             System.out.println(createdStorage);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

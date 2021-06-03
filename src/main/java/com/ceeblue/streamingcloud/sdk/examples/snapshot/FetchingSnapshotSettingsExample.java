@@ -19,7 +19,7 @@ public class FetchingSnapshotSettingsExample {
 
             System.out.println(snapshot);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

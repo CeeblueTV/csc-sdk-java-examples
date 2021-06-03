@@ -16,7 +16,7 @@ public class DeletingOutputStreamExample {
 
             outputStreamClient.deleteOutput(streamId);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 
@@ -32,7 +32,7 @@ class DeletingOutputSessionExample {
         try {
             outputStreamClient.deleteOutputSessions(streamId);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

@@ -18,7 +18,7 @@ public class UpdatingStorageExample {
 
             System.out.println(updatedStorage);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

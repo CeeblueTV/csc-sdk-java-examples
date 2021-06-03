@@ -18,7 +18,7 @@ public class InputStreamFetchingExample {
             CreatedInput fetchedStream = inputStreamClient.getInput(streamId);
             System.out.println(fetchedStream);
         } catch (ClientException exception) {
-            System.out.println("Hmm: " + exception);
+            System.err.println("Hmm: " + exception);
         }
     }
 
@@ -32,7 +32,7 @@ class FetchingAllInputStreamsExample {
 
         List <CreatedInput> fetchedStream = inputStreamClient.getInputs();
 
-        System.out.println(fetchedStream);
+        System.err.println(fetchedStream);
     }
 
 }

@@ -17,7 +17,7 @@ public class InputStreamUpdatingExample {
 
             System.out.println(createdInput);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
 
     }

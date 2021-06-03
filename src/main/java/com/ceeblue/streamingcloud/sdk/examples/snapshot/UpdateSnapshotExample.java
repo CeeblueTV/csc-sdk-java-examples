@@ -24,7 +24,7 @@ public class UpdateSnapshotExample {
         try {
             snapshotClient.updateSnapshotSettings(snapshot, streamId, Source.Incoming);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

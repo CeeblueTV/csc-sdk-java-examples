@@ -20,7 +20,7 @@ public class FetchingStorageExample {
 
             System.out.println(storage);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 
@@ -37,7 +37,7 @@ class fetchingAllStorages {
 
             System.out.println(storages);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

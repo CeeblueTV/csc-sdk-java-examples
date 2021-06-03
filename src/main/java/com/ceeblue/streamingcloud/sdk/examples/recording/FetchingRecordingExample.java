@@ -33,7 +33,7 @@ class FetchAllRecordingsExample {
 
             System.out.println(allRecordings);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 
@@ -50,7 +50,7 @@ class FetchAllRecordingsByStream {
 
             System.out.println(allRecordings);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

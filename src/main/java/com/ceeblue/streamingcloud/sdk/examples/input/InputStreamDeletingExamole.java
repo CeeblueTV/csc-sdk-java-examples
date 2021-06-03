@@ -15,7 +15,7 @@ public class InputStreamDeletingExamole {
         try {
             inputStreamClient.deleteInput(streamId);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
 
     }

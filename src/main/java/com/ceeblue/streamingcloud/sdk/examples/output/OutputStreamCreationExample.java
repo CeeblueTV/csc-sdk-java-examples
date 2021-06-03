@@ -21,7 +21,7 @@ public class OutputStreamCreationExample {
 
             System.out.println(createdOutput);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 

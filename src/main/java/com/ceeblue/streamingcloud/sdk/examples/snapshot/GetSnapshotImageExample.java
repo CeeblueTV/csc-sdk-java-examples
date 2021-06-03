@@ -15,7 +15,7 @@ public class GetSnapshotImageExample {
         try {
             snapshotClient.getSnapshotImage(streamId, Source.Incoming);
         } catch (ClientException exception) {
-            System.out.println("Something went wrong: " + exception);
+            System.err.println("Something went wrong: " + exception);
         }
     }
 
