@@ -35,7 +35,7 @@ class fetchingAllStorages {
         try {
             List <AmazonS3> storages = storageClient.getStorages();
 
-            System.out.println(storages);
+            storages.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }

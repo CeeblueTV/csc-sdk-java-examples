@@ -31,7 +31,7 @@ class FetchingAllInputStreamsExample {
 
         List <InputEndpoint> fetchedStream = inputStreamClient.getInputs();
 
-        System.out.println(fetchedStream);
+        fetchedStream.forEach(System.out::println);
     }
 
 }

@@ -17,7 +17,7 @@ public class FetchingOutputStreamExample {
         try {
             List <OutputEndpoint> outputs = outputStreamClient.getOutputs(streamId);
 
-            System.out.println(outputs);
+            outputs.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }

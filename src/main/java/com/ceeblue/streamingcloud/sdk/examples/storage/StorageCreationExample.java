@@ -3,6 +3,7 @@ package com.ceeblue.streamingcloud.sdk.examples.storage;
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
+import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3;
 import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3Compatible;
 
 public class StorageCreationExample {
