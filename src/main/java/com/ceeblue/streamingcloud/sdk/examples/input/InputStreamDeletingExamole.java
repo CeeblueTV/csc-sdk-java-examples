@@ -10,7 +10,7 @@ public class InputStreamDeletingExamole {
         String streamId = "Place your input id here";
 
         InputStreamClient inputStreamClient = ApiClientsCreationExamples.getInputStreamClient();
-        
+
         try {
             inputStreamClient.deleteInput(streamId);
         } catch (ClientException exception) {

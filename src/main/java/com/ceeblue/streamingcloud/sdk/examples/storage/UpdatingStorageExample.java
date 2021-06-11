@@ -21,5 +21,4 @@ public class UpdatingStorageExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

@@ -4,8 +4,8 @@ import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExam
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.OutputSettings;
-import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.InputEndpoint;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.Input;
+import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.InputEndpoint;
 import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
 
 import static com.ceeblue.streamingcloud.sdk.streams.utils.Presets.H264_1080p_30fps_4Mbps;

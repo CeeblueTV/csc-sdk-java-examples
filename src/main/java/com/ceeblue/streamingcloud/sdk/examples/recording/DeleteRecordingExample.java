@@ -11,7 +11,6 @@ public class DeleteRecordingExample {
 
         String recordingId = "Place your recording id here";
 
-
         try {
             recordingClient.deleteRecording(recordingId);
         } catch (ClientException exception) {

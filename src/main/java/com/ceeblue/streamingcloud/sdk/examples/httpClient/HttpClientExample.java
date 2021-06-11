@@ -6,6 +6,7 @@ import com.ceeblue.streamingcloud.sdk.http.clients.RestTemplateResponseErrorHand
 import org.springframework.web.client.RestTemplate;
 
 public class HttpClientExample {
+
     public static HttpClient getHttpCClient() {
         RestTemplate template = new RestTemplate();
 

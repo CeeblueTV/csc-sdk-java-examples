@@ -14,7 +14,6 @@ public class FetchingStorageExample {
 
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
-
         try {
             AmazonS3 storage = storageClient.getStorage(storageId);
 
@@ -30,7 +29,6 @@ class FetchingAllStorages {
 
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
-
 
         try {
             List <AmazonS3> storages = storageClient.getStorages();

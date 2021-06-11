@@ -9,7 +9,6 @@ public class DeletingStorageExample {
     public static void main(String[] args) {
         String storageId = "place your storage id here";
 
-
         try {
             StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
 
@@ -18,5 +17,4 @@ public class DeletingStorageExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

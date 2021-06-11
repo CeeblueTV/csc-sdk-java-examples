@@ -17,7 +17,6 @@ public class FetchingPushExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
 
 class FetchingAllPushes {
@@ -36,5 +35,4 @@ class FetchingAllPushes {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

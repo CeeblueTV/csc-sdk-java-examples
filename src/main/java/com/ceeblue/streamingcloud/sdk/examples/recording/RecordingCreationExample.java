@@ -2,12 +2,12 @@ package com.ceeblue.streamingcloud.sdk.examples.recording;
 
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
+import com.ceeblue.streamingcloud.sdk.streams.models.Source;
 import com.ceeblue.streamingcloud.sdk.streams.push.models.output.TrackSelector;
 import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClient;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.Capture;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.FileFormat;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.Recording;
-import com.ceeblue.streamingcloud.sdk.streams.models.Source;
 import com.ceeblue.streamingcloud.sdk.streams.recording.models.created.RecordingModel;
 import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
 import com.ceeblue.streamingcloud.sdk.streams.storage.models.storages.AmazonS3;

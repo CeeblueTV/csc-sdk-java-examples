@@ -4,8 +4,8 @@ import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExam
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.models.InputFormat;
 import com.ceeblue.streamingcloud.sdk.streams.output.OutputStreamClient;
-import com.ceeblue.streamingcloud.sdk.streams.output.models.output.OutputEndpoint;
 import com.ceeblue.streamingcloud.sdk.streams.output.models.output.Output;
+import com.ceeblue.streamingcloud.sdk.streams.output.models.output.OutputEndpoint;
 
 public class OutputStreamCreationExample {
 

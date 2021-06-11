@@ -20,7 +20,6 @@ public class UpdateSnapshotExample {
         SnapshotClient snapshotClient = ApiClientsCreationExamples.getSnapshotClient();
         String streamId = "Place your input streamId here";
 
-
         try {
             snapshotClient.updateSnapshotSettings(snapshot, streamId, Source.Incoming);
         } catch (ClientException exception) {

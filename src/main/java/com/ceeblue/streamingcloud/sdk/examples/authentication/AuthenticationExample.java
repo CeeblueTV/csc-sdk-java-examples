@@ -5,7 +5,6 @@ import com.ceeblue.streamingcloud.sdk.authentiffication.AuthenticationClientImpl
 import com.ceeblue.streamingcloud.sdk.authentiffication.Credentials;
 import com.ceeblue.streamingcloud.sdk.examples.httpClient.HttpClientExample;
 
-
 public class AuthenticationExample {
 
     public static AuthenticationClient getAuthInstance() {
