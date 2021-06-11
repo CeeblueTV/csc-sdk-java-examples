@@ -22,10 +22,9 @@ public class FetchingStorageExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
 
-class FetchingAllStorages {
+class ListStoragesExample {
 
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
@@ -33,10 +32,10 @@ class FetchingAllStorages {
         try {
             List <AmazonS3> storages = storageClient.getStorages();
 
+            System.out.println("Results: ");
             storages.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

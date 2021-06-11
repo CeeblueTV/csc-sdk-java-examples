@@ -15,12 +15,12 @@ public class OutputStreamCreationExample {
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 
         try {
-            OutputEndpoint outputEndpoint = outputStreamClient.createOutput(new Output(streamId, InputFormat.RTMP));
+            final Output output = new Output(streamId, InputFormat.RTMP);
+            OutputEndpoint outputEndpoint = outputStreamClient.createOutput(output);
 
             System.out.println(outputEndpoint);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

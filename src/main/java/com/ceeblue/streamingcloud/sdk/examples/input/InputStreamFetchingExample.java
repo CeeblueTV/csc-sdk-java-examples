@@ -21,7 +21,6 @@ public class InputStreamFetchingExample {
             System.err.println("Hmm: " + exception);
         }
     }
-
 }
 
 class FetchingAllInputStreamsExample {
@@ -29,9 +28,8 @@ class FetchingAllInputStreamsExample {
     public static void main(String[] args) {
         InputStreamClient inputStreamClient = ApiClientsCreationExamples.getInputStreamClient();
 
-        List <InputEndpoint> fetchedStream = inputStreamClient.getInputs();
+        List<InputEndpoint> fetchedStream = inputStreamClient.getInputs();
 
         fetchedStream.forEach(System.out::println);
     }
-
 }

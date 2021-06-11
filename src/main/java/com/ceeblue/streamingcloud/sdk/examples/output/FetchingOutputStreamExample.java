@@ -15,7 +15,7 @@ public class FetchingOutputStreamExample {
         OutputStreamClient outputStreamClient = ApiClientsCreationExamples.getOutputStreamClient();
 
         try {
-            List <OutputEndpoint> outputs = outputStreamClient.getOutputs(streamId);
+            List<OutputEndpoint> outputs = outputStreamClient.getOutputs(streamId);
 
             System.out.println("Results: ");
             outputs.forEach(System.out::println);
@@ -23,5 +23,4 @@ public class FetchingOutputStreamExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

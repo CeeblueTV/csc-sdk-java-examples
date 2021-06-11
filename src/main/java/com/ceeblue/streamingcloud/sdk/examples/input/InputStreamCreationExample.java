@@ -17,10 +17,9 @@ public class InputStreamCreationExample {
         InputStreamClient inputStreamClient = ApiClientsCreationExamples.getInputStreamClient();
 
         Input input = new Input(InputFormat.WebRTC)
-                .setOutput(
-                        new OutputSettings()
-                                .addTrack(H264_1080p_30fps_4Mbps())
-                                .addTrack(Opus_48kHz_2Ch_120Kbps())
+                .setOutput(new OutputSettings()
+                        .addTrack(H264_1080p_30fps_4Mbps())
+                        .addTrack(Opus_48kHz_2Ch_120Kbps())
                 );
 
         try {
@@ -30,7 +29,5 @@ public class InputStreamCreationExample {
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
-
     }
-
 }

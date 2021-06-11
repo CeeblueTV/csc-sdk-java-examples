@@ -17,7 +17,6 @@ public class DeletingOutputStreamExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
 
 class DeletingOutputSessionExample {
@@ -33,5 +32,4 @@ class DeletingOutputSessionExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }
