@@ -8,6 +8,8 @@ import com.ceeblue.streamingcloud.sdk.streams.input.InputApiClientImplementation
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
 import com.ceeblue.streamingcloud.sdk.streams.output.OutputApiClientImplementation;
 import com.ceeblue.streamingcloud.sdk.streams.output.OutputStreamClient;
+import com.ceeblue.streamingcloud.sdk.streams.push.ApiPushClientImplementation;
+import com.ceeblue.streamingcloud.sdk.streams.push.StreamPushClient;
 import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClient;
 import com.ceeblue.streamingcloud.sdk.streams.recording.RecordingClientImplementation;
 import com.ceeblue.streamingcloud.sdk.streams.snapshot.SnapshotClient;
@@ -16,6 +18,7 @@ import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClient;
 import com.ceeblue.streamingcloud.sdk.streams.storage.StorageClientImplementation;
 
 public class ApiClientsCreationExamples {
+
     public static InputStreamClient getInputStreamClient() {
         HttpClient httpClient = HttpClientExample.getHttpCClient();
 
@@ -50,4 +53,16 @@ public class ApiClientsCreationExamples {
         AuthenticationClient authenticationClient = AuthenticationExample.getAuthInstance();
         return new SnapshotClientImplementation(authenticationClient, httpClient);
     }
+
+    public static StreamPushClient getPushClient() {
+        HttpClient httpClient = HttpClientExample.getHttpCClient();
+
+        AuthenticationClient authenticationClient = AuthenticationExample.getAuthInstance();
+        return new ApiPushClientImplementation(authenticationClient, httpClient);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(AuthenticationExample.getAuthInstance().authenticate().getToken());
+    }
+
 }
