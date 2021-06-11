@@ -26,7 +26,7 @@ public class FetchingStorageExample {
 
 }
 
-class fetchingAllStorages {
+class FetchingAllStorages {
 
     public static void main(String[] args) {
         StorageClient storageClient = ApiClientsCreationExamples.getStorageClient();
