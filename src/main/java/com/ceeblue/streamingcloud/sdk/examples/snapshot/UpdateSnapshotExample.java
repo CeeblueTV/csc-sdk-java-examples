@@ -13,7 +13,6 @@ import static com.ceeblue.streamingcloud.sdk.streams.snapshot.models.SnapshotFor
 public class UpdateSnapshotExample {
 
     public static void main(String[] args) {
-        //Existed recording
         Snapshot snapshot = new Snapshot().setFormat(SnapshotFormatType.PNG).setInterval(5).setQuality(SnapshotQualityType.High);
         snapshot.setFormat(JPEG);
 

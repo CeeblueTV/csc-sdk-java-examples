@@ -28,7 +28,8 @@ class FetchAllRecordingsExample {
         try {
             List <RecordingModel> allRecordings = recordingClient.getRecordings();
 
-            System.out.println(allRecordings);
+            System.out.println("Results: ");
+            allRecordings.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
