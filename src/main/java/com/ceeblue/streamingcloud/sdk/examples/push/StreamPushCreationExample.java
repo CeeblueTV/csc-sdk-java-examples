@@ -1,16 +1,18 @@
 package com.ceeblue.streamingcloud.sdk.examples.push;
 
-import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.authentiffication.Credentials;
+import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientCreateExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.push.models.output.RTMPOutput;
 import com.ceeblue.streamingcloud.sdk.streams.push.models.push.Push;
 
 import static com.ceeblue.streamingcloud.sdk.streams.push.models.PushFormat.RTMP;
 
-public class PushCreationExample {
+public class StreamPushCreationExample {
 
     public static void main(String[] args) {
-        var pushClient = ApiClientsCreationExamples.getPushClient();
+        var pushClient = ApiClientCreateExamples
+                .getPushClient(new Credentials("Place your username here", "Place your password here"));
         String streamId = "Place your input stream id here";
 
         try {

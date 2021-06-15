@@ -1,14 +1,16 @@
 package com.ceeblue.streamingcloud.sdk.examples.snapshot;
 
-import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.authentiffication.Credentials;
+import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientCreateExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.models.Source;
 import com.ceeblue.streamingcloud.sdk.streams.snapshot.SnapshotClient;
 
-public class GetSnapshotImageExample {
+public class StreamSnapshotImageFetchingExample {
 
     public static void main(String[] args) {
-        SnapshotClient snapshotClient = ApiClientsCreationExamples.getSnapshotClient();
+        SnapshotClient snapshotClient = ApiClientCreateExamples
+                .getSnapshotClient(new Credentials("Place your username here", "Place your password here"));
 
         String streamId = "Place your input streamId here";
 
@@ -18,5 +20,4 @@ public class GetSnapshotImageExample {
             System.err.println("Something went wrong: " + exception);
         }
     }
-
 }

@@ -1,12 +1,14 @@
 package com.ceeblue.streamingcloud.sdk.examples.push;
 
-import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
+import com.ceeblue.streamingcloud.sdk.authentiffication.Credentials;
+import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientCreateExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 
-public class FetchingPushExample {
+public class StreamPushFetchingExample {
 
     public static void main(String[] args) {
-        var pushClient = ApiClientsCreationExamples.getPushClient();
+        var pushClient = ApiClientCreateExamples
+                .getPushClient(new Credentials("Place your username here", "Place your password here"));
         String streamId = "Place your push id here";
 
         try {
@@ -19,17 +21,17 @@ public class FetchingPushExample {
     }
 }
 
-class FetchingAllPushes {
+class StreamPushFetchingAll {
 
     public static void main(String[] args) {
-        var pushClient = ApiClientsCreationExamples.getPushClient();
+        var pushClient = ApiClientCreateExamples
+                .getPushClient(new Credentials("Place your username here", "Place your password here"));
         String streamId = "Place your stream id here";
 
         try {
             var pushes = pushClient.retrieveStreamPush(streamId);
 
             System.out.println("Result:");
-
             pushes.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
