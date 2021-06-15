@@ -10,7 +10,7 @@ import java.util.List;
 public class InputStreamFetchingExample {
 
     public static void main(String[] args) {
-        String streamId = "Place your streamId here";
+        String streamId = "e9ecff84-c989-41e5-ae34-24872eb0e3c9";
 
         InputStreamClient inputStreamClient = ApiClientsCreationExamples.getInputStreamClient();
 

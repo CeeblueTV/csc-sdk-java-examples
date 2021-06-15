@@ -3,6 +3,7 @@ package com.ceeblue.streamingcloud.sdk.examples.input;
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientsCreationExamples;
 import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.input.InputStreamClient;
+import com.ceeblue.streamingcloud.sdk.streams.input.models.InputStreamer;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.OutputSettings;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.Input;
 import com.ceeblue.streamingcloud.sdk.streams.input.models.inputs.InputEndpoint;
@@ -20,7 +21,7 @@ public class InputStreamCreationExample {
                 .setOutput(new OutputSettings()
                         .addTrack(H264_1080p_30fps_4Mbps())
                         .addTrack(Opus_48kHz_2Ch_120Kbps())
-                );
+                ).setStreamer(new InputStreamer().setIp("0.0.0.0"));
 
         try {
             InputEndpoint inputEndpoint = inputStreamClient.createInput(input);

@@ -17,7 +17,7 @@ public class OutputSettingsExample {
 
             OutputSettings updatedOutput = inputStreamClient.updateOutputSettings(streamId, output.setPassthrough(true));
             System.out.println("Updated output settings: " + updatedOutput);
-            OutputSettings updatedOutput = inputStreamClient.updateOutputSettings(streamId, output.setPassthrough(true));
+            updatedOutput = inputStreamClient.updateOutputSettings(streamId, output.setPassthrough(true));
 
             System.out.println(updatedOutput);
         } catch (ClientException exception) {
