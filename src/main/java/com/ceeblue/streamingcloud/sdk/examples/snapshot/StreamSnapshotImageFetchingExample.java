@@ -15,7 +15,9 @@ public class StreamSnapshotImageFetchingExample {
         String streamId = "Place your input streamId here";
 
         try {
-            snapshotClient.getSnapshotImage(streamId, Source.Incoming);
+            var image = snapshotClient.getSnapshotImage(streamId, Source.Incoming);
+
+            System.out.println("Snapshot location"+image.getAbsolutePath());
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }
