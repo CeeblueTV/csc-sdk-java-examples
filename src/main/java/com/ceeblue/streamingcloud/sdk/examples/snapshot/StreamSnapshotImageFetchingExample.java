@@ -35,13 +35,13 @@ public class StreamSnapshotImageFetchingExample {
             String imageFormat = Arrays.stream(ContentType.values())
                     .filter(e -> e.contentType.equals(responseInfo.getHeaders().get(CONTENT_TYPE)))
                     .findFirst()
-                    .orElseThrow(() -> new ClientException("Unknown type: " + responseInfo.getHeaders().get(CONTENT_TYPE))).format;
+                    .orElseThrow(() -> new RuntimeException("Unknown type: " + responseInfo.getHeaders().get(CONTENT_TYPE))).format;
 
             File snapshot = new File(LocalDateTime.now() + SNAPSHOT + imageFormat);
             ImageIO.write(bufferedImage, imageFormat, snapshot);
 
             System.out.println("Snapshot location" + snapshot.getAbsolutePath());
-        } catch (ClientException | IOException exception) {
+        } catch (RuntimeException | IOException exception) {
             System.err.println("Something went wrong: " + exception);
         }
     }
