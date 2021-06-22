@@ -50,7 +50,8 @@ class StreamRecordingFetchAllByStreamExample {
         try {
             List<RecordingStatus> recordings = recordingClient.getRecordingByStreamId(streamId);
 
-            System.out.println(recordings);
+            System.out.println("Results: ");
+            recordings.forEach(System.out::println);
         } catch (ClientException exception) {
             System.err.println("Something went wrong: " + exception);
         }

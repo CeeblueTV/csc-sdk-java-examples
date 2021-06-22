@@ -2,7 +2,6 @@ package com.ceeblue.streamingcloud.sdk.examples.snapshot;
 
 import com.ceeblue.streamingcloud.sdk.authentiffication.Credentials;
 import com.ceeblue.streamingcloud.sdk.examples.apiclients.ApiClientCreateExamples;
-import com.ceeblue.streamingcloud.sdk.streams.exceptions.ClientException;
 import com.ceeblue.streamingcloud.sdk.streams.models.Source;
 import com.ceeblue.streamingcloud.sdk.streams.snapshot.SnapshotClient;
 import com.ceeblue.streamingcloud.sdk.streams.snapshot.models.ContentType;
